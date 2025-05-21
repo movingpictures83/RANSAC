@@ -57,7 +57,8 @@ class RANSACPlugin:
     
     ls_model_y1, ransac_model_y1 = fit_curve(df1)
     ls_model_y2, ransac_model_y2 = fit_curve(df2)
-
+    outf = open(outputfile+".txt", 'w')
+    outf.write(str(ransac_model_y1))
     fig, (ax1, ax2) = plt.subplots(1, 2)
 
     ax1.set_title('Dataset-1')
